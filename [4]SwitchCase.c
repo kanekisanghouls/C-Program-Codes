@@ -14,7 +14,7 @@ int main()
   char rival[20];
 
   printf("My name is Oak! People call me the Prof Oak\n");
-  printf("I study Pokémon as a profession, First What is your Name? \n");
+  printf("I study PokÃ©mon as a profession, First What is your Name? \n");
   //Your Name
   do{
       printf("Trainer: What is your name?  :");
