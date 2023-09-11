@@ -1,205 +1,230 @@
-//========================= DO-WHILE LOOP =========================
+//========================= ARRAY =========================
 // [ SCROLL DOWN TO SEE ANOTHER EXAMPLES !! ]
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+
+    int n,i; int arr[n]; printf("Enter size of array :\n"); scanf("%d", &n);
+    printf("your Size of Array is %d!! \n",n);
+    int array[n];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &array[n]);
+    }
+        printf("Size %d \n ",n);
+
+    for(i = 0; i < n; i++)
+    {
+        printf("\n Input Elements for Array to be holded by a[%d]: \n", i); scanf("%d", &arr[i]);
+    }
+
+    printf("\n Printing elements of the array: \n\n");
+
+    for(i = 0; i < n; i++)
+    {
+        printf("%d \n", arr[i]);
+    }
+ return 0;
+}
+
+//========================= FUNCTIONS =========================
+// [ SCROLL DOWN TO SEE ANOTHER EXAMPLES !! ]
+#include <stdio.h>
+int main()
+{
+    int choices;
+    printf("Do you want to Use your Special Move ?\n 1)Reality Marble \n 2)Secret Move\n 3) Pressure Points \n");
+    scanf("%d",&choices);
+    printf("----------------------- \n");
+    if(choices == 1)
+    {
+        printf("By my Command Seal Archer user your Noble Phantasm\n"); sleep(2);
+        iAmtheBone(); sleep(3); stealIsMyBody(); sleep(3); haveCreated();
+        sleep(3); unknownTolife(); sleep(3); HaveWithstood();
+        sleep(3); YetThose(); sleep(3); SoAsI(); sleep(2);
+        UnlimitedBlade(); sleep(2);
+    }
+     else if(choices==2)
+    {
+        UltimateTechnique();
+    }
+    else if (choices==3)
+    {
+        Weapons();
+    }
+    else{
+        printf("Invalid");
+    }
+ return 0;
+}
+
+void iAmtheBone() { printf("I am the Bone of My Sword \n"); sleep(2); }
+void stealIsMyBody() { printf("Steal is My Body and Fire is my Blood \n"); }
+void YetThose() { printf("Yet those hands will never hold anything \n"); }
+void UnlimitedBlade() { printf("Unlimited Blade Works \n"); }
+void UltimateTechnique() { printf("Smokey , Nigerundayo !!!"); }
+
+void Weapons() {
+    for(int q=1; q<4;q++)
+    {
+      sleep(1);
+      printf("Ataatatatatat \n");
+    }
+
+  printf("Kenshiro: "); sleep(2); printf(" Omae wa Mou Shinderu \n");
+  sleep(1); printf("Enemy : "); sleep(2);
+  printf(" Nani!!!!!"); sleep(2);
+
+}
+
+void haveCreated() { printf("I Have Created over a Thousand Blades \n"); }
+void unknownTolife() { printf("Unknown to Life, nor Known to Death \n"); }
+void HaveWithstood() { printf("Have withstood the pain to Create many Weapons \n"); }
+void SoAsI() { printf("So as I Pray \n"); }
+void Stand() { printf(""); }
+
+//========================= SWITCH CASE =========================
+// [ SCROLL DOWN TO SEE ANOTHER EXAMPLES !! ]
+
 #include <stdio.h>
 #include <stdbool.h>
 
 int main()
 {
-   int i = 0;
-   int option;
-   int num;
-   bool stats = true;
-   printf("Try Input a Number Until you're bored \n");
-    do{
-      //printf("%d\n", i);
-      printf("Input a Number : \n");
-      scanf("%d",&num);
-      i++;
-      printf("Do you want to Continue? \n 1)Yes \n 2)No \n");
-      scanf(" %d",&option);
-      if(option == 1)
+  int options;
+  bool proceed= true;
+  bool proceed1= true;
+  bool proceed2 = true;
+  int  choice;
+  int  choice1;
+  int  choice2;
+  char trainer[20];
+  char rival[20];
+
+  printf("My name is Oak! People call me the Prof Oak\n");
+  printf("I study Pokémon as a profession, First What is your Name? \n");
+  //Your Name
+  do{
+      printf("Trainer: What is your name?  :");
+      scanf("%s",&trainer);
+      printf("Is this your Name %s ? \n 1) Yes 2) No \n",trainer);
+      scanf("%d",&choice1);
+      switch(choice1)
       {
-        stats = true;
+        case 1:
+            printf("Your Answer : Yes \n");
+            proceed1= true; break;
+        case 2:
+            printf("Your Answer : No \n");
+            proceed1= false; break;
+        default:
+            printf("Invalid Options");
+        break;
       }
-      else if(option == 2)
+
+  }while(proceed1==false);
+    printf("Ah!! Right your name is %s \n",trainer);
+  printf("\n===========\n");
+
+
+  // Rivals Name
+  do{
+      printf("This is my Grandson,\nHe's been your rival since you were a baby. ..Erm,\n what is his name again : ");
+      scanf("%s",&rival);
+    
+      printf("Is that your Rival's Name %s ? \n 1) Yes 2) No \n",rival);
+      scanf("%d",&choice2);
+
+      if(choice2==1)
       {
-         stats = false;
+            printf(" Your Answer : Yes \n");
+            proceed2= true;
       }
-      else
+      else if(choice2==2)
       {
-        printf("Invalid Input \n");
-        stats = false;
+            printf(" Your Answer : No \n");
+            proceed2= false;
       }
-    }
-    while(stats);
-
-
- return 0;
-}
-
-//========================= FOR LOOP =========================
-// [ SCROLL DOWN TO SEE ANOTHER EXAMPLES !! ]
-#include <stdio.h>
-
-int main()
-{
- int a = 5;
- int lap;
- int car;
-
- printf("Select your car. Input Number 1,2 and 3 to select your car: \n");
- printf("1) Bugatti 2) Ferrari 3) Lamborghini  \n");
- scanf("%d",&car);
- if(car==1)
- {
-  printf("You've choosen 1) Bugatti \n");
-
-  for(int i= 0;a>=i;i++ )
-     {
-            lap = i;
-            printf("Laps %2d\n",lap);
-
-     }
-    printf("Lap Finish");
- }
- else if(car==2)
- {
-  printf("You've choosen 2) Ferrari \n");
-
-  for(int i= 0;a>=i;i++ )
-     {
-            lap = i;
-            printf("Laps %2d\n",lap);
-
-     }
-    printf("Lap Finish");
- }
- else if(car==3)
- {
-  printf("You've choosen 3) Lamborghini \n");
-
-  for(int i= 0;a>=i;i++ )
-     {
-            lap = i;
-
-            printf("Laps %2d\n",lap);
-
-     }
-     printf("Lap Finish");
-
- }
- else
- {
-  printf("Invalid Input");
- }
-
-
- return 0;
-}
-
-
-//========================= WHILE LOOP INFINITE =========================
-// [ SCROLL DOWN TO SEE ANOTHER EXAMPLES !! ]
-#include <stdio.h>
-#include <stdbool.h>
-//stdbool is for Boolean to be used
-int main()
-{
-    /* Boolean stat Infinite Loop and using
-     While as Infinite Loop
-     For loop or the 7 Pages Mudas
-     Press ctrl + break to exit Infinite Loop
-     */
-    bool iHave_A_Dream = true;
-    int i = 0;
-    int move= 1;
-    int pages = 7;
-    int numTrap= 0;
-    printf("Giorno Giovanna : Moveset \n");
-    printf("Select Move \n 1) Golden Experience Requiem \n 2) Muda Muda Barrage\n");
-    numTrap = scanf("%d",&move);
-    if(move==1)
-    {
-      printf("Giorno Used Golden Experience Requiem \n");
-       if(iHave_A_Dream == true ){
-          while (move == numTrap)
-            {
-              printf("Diavolo and King Crimson : Loop Count = ");
-              printf("%d\n",i);
-              i++;
-          }
+       else{
+            printf("Invalid Options");
       }
-      else
-        {
-         printf(" OH MY GOD !!!");
-        }
-    }
-    else if(move==2)
-    {
-       printf("Giorno Used Muda Barrage \n");
-       for(int x = 0; pages > x;x++){
-         printf(" Muda ! Muda! Muda! Muda! \n");
+  }while(proceed2==false);
+    printf("Ah!! That's Right I remember now His name is %s \n",rival);
+  //Choose a Starter
+       do{
+            printf("Please %s Choose your Starter Pokemon\n",trainer);
+            printf("\n 1) Bulbasaur \n 2) Charmander \n 3) Squirtle \n 4) Pikachu \n5) Eeevee ");
+            scanf("%d",&options);
+              switch (options) {
+                case 1:
+                  printf(" Bulbasaur ");
+                  break;
+                case 2:
+                  printf(" Charmander ");
+                  break;
+                case 3:
+                  printf(" Squirtle ");
+                  break;
+                case 4:
+                    printf(" Pikachu ");
+                    break;
+                case 5:
+                    printf(" Eevee ");
+                    break;
+                default:
+                  printf("Invalid Input");
+                  break;
+              }
+
+              printf("\n Do you want to Change your Starter ? \n 1) Yes \n 2) No \n");
+              scanf("%d",& choice);
+              switch(choice)
+              {
+               case 1:
+                proceed = true;
+               break;
+               case 2:
+               proceed = false;
+               break;
+               default:
+                 printf("Invalid\n");
+                 proceed = false;
+               break;
+              }
+       }while(proceed==true);
+
+       switch(options){
+       case 1:
+        printf("Trainer %s has choosen Bulbasaur !!\n",trainer);
+        printf("%s has choosen Charmander\n",rival);
+       break;
+
+       case 2:
+        printf("Trainer %s has choosen Charmander !!\n",trainer);
+        printf("%s has choosen Squirtle\n",rival);
+       break;
+
+       case 3:
+        printf("Trainer %s have choosen Squirtle !!\n",trainer);
+        printf("%s has choosen Bulbasaur\n",rival);
+        break;
+
+       case 4:
+        printf("Trainer %s have choosen Pikachu !!\n",trainer);
+        printf("%s has choosen Eeevee\n",rival);
+        break;
+
+        case 5:
+        printf("Trainer %s have choosen Eevee !!\n",trainer);
+        printf("%s has choosen Pikachu\n",rival);
+        break;
+
+        default:
+        printf("Oops Sorry!! ");
+        break;
        }
-       printf(" WRYYYYYYYY!!!!!");
-    }
-    else
-    {
-     printf("Giorno Used the Joestar's Secret Technique \n");
-     printf("  Nigerundayo !!\n");
-     printf("--- Proceeds to Runaway ---");
-    }
 
  return 0;
-}
-
-
-//========================= NEST LOOP ROWS AND COLUMNS =========================
-// [ SCROLL DOWN TO SEE ANOTHER EXAMPLES !! ]
-#include <stdio.h>
-#include <stdbool.h>
-int main()
-{
-       int inputRow;
-       int inputColumn;
-       char string[20];
-       int options;
-       bool proceed = true;
-
-      do{
-           printf("Enter the value of input Column: ");
-           scanf("%d",&inputColumn);
-           printf("Enter the value of input Row: ");
-           scanf("%d",&inputRow);
-           printf("Input String : \n");
-           scanf("%s",&string);
-           printf("Your String Input is %s : \n",string);
-           for(int i=1;i<=inputColumn;i++)
-           {
-               for(int j=1;j<=inputRow;j++)
-               {
-                   printf("%s\t",(string));
-               }
-               printf("\n");
-           }
-
-
-        printf("Do you want to continue?  \n1) Yes \n2) No \n");
-        scanf("%d",&options);
-        if(options==1)
-        {
-          proceed = true;
-        }
-        else if(options ==2)
-        {
-          proceed = false;
-        }
-        else
-        {
-          proceed = false;
-        }
-       }
-       while(proceed);
-
-
-       return 0;
 }
